@@ -31,3 +31,5 @@ Route::fallback(function () {
     echo 'A rota acessada não existe! <a href="'.route('site.homepage').'"> clique aqui </a>
     para voltar a homepage';
 });
+
+Route::get("/teste/{p1}/{p2}", [\App\Http\Controllers\TesteController::class, 'teste'] ) -> name("teste");  // Envia os parâmetros da rota pro controlador
