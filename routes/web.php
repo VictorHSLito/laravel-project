@@ -24,7 +24,7 @@ Route::get(
 Route::prefix('/app') ->group(function () {
     Route::get("/customers", function () {return "Customers";}) -> name("app.customers");
     Route::get("/login", function () {return "Login";}) -> name("app.login");
-    Route::get("/suppliers", function () {return "Suppliers";}) -> name("app.suppliers");
+    Route::get("/suppliers", [\App\Http\Controllers\SuppliersController::class, 'index']) -> name("app.suppliers");
 });
 
 Route::fallback(function () {
