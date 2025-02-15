@@ -1,7 +1,4 @@
-<h3>
-    Contact (view)
-</h3>
-
+<x-layout title="Contact - Page">
 <ul>
     <li>
         <a href="{{route("site.homepage")}}">Home Page</a>
@@ -12,4 +9,5 @@
     <li>
         <a href={{route("site.test")}}>Test</a>
     </li>
-</ul>
+</ul>   
+</x-layout>

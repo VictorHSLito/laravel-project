@@ -1,8 +1,11 @@
 <h3>Suppliers View</h3>
 
-Fornecedor: {{ $suppliers[0]['name'] }} <br>
-Status:{{ $suppliers[0]['status'] }} <br>
+@foreach ($suppliers as $supplier)
+    Fornecedor: {{ $supplier['name'] }} <br>
+    Status:{{ $supplier['status'] }} <br>
+    CPF:{{ $supplier['cpf']}} <br>
+@endforeach
 
 @if(!($suppliers[0]['status'] == "inativo"))
-    <h3>Servidor não está inativo</h3>    
+    <h3>O servidor {{$suppliers[0]['name']}} não está inativo</h3>    
 @endif
